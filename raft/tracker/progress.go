@@ -43,8 +43,8 @@ type Progress struct {
 	State StateType
 
 	// PendingSnapshot is used in StateSnapshot.
-	// If there is a pending snapshot, the pendingSnapshot will be set to the
-	// index of the snapshot. If pendingSnapshot is set, the replication process of
+	// If there is a pending snapshot, the PendingSnapshot will be set to the
+	// index of the snapshot. If PendingSnapshot is set, the replication process of
 	// this Progress will be paused. raft will not resend snapshot until the pending one
 	// is reported to be failed.
 	PendingSnapshot uint64
