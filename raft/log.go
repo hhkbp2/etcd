@@ -123,7 +123,6 @@ func (l *raftLog) append(ents ...pb.Entry) uint64 {
 // entries, the index of the first new entry will be returned.
 // An entry is considered to be conflicting if it has the same index but
 // a different term.
-// The first entry MUST have an index equal to the argument 'from'.
 // The index of the given entries MUST be continuously increasing.
 func (l *raftLog) findConflict(ents []pb.Entry) uint64 {
 	for _, ne := range ents {
